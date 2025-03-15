@@ -1,0 +1,23 @@
+@font-face {
+    src: url(MabryPro/MabryPro-Bold.woff) format('woff'),
+    url(MabryPro/MabryPro-Bold.woff2) format('woff2');
+    font-family: 'MabryPro';
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    src: url(MabryPro/MabryPro-Medium.woff) format('woff'),
+    url(MabryPro/MabryPro-Medium.woff2) format('woff2');
+    font-family: 'MabryPro';
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    src: url(MabryPro/MabryPro-Regular.woff) format('woff'),
+    url(MabryPro/MabryPro-Regular.woff2) format('woff2');
+    font-family: 'MabryPro';
+    font-style: normal;
+    font-weight: 400;
+}
