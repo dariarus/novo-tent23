@@ -16,3 +16,8 @@
 
 @import url(blocks/contacts/contacts.css);
 @import url(blocks/contacts/__icon/contacts__icon.css);
+
+@import url(blocks/hero/hero.css);
+@import url(blocks/hero/__text/hero__text.css);
+@import url(blocks/hero/__text/_primary/hero__text_primary.css);
+@import url(blocks/hero/__text/_secondary/hero__text_secondary.css);
