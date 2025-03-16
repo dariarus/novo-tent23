@@ -1,5 +1,3 @@
 .contacts {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
+  margin: 0 auto;
 }

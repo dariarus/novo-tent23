@@ -14,10 +14,19 @@
 @import url(blocks/navigation/navigation.css);
 @import url(blocks/navigation/__link/navigation__link.css);
 
-@import url(blocks/contacts/contacts.css);
-@import url(blocks/contacts/__icon/contacts__icon.css);
+@import url(blocks/contacts-icons/contacts-icons.css);
+@import url(blocks/contacts-icons/__icon/contacts-icons__icon.css);
 
 @import url(blocks/hero/hero.css);
 @import url(blocks/hero/__text/hero__text.css);
 @import url(blocks/hero/__text/_primary/hero__text_primary.css);
 @import url(blocks/hero/__text/_secondary/hero__text_secondary.css);
+
+@import url(blocks/section/section.css);
+@import url(blocks/section/__title/section__title.css);
+
+@import url(blocks/contacts/contacts.css);
+@import url(blocks/contacts/__buttons-wrapper/contacts__buttons-wrapper.css);
+
+@import url(blocks/button/button.css);
+@import url(blocks/button/_colored/button_colored.css);

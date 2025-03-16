@@ -1,0 +1,8 @@
+.button_colored {
+  background-color: #fff;
+  transition: background-color .3s;
+}
+
+.button_colored:hover {
+  background-color: #265cff;
+}

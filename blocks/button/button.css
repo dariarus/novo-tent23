@@ -1,0 +1,23 @@
+.button {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 8px;
+  box-sizing: border-box;
+  padding: 12px;
+  flex-grow: 1;
+  border: solid 1px #e5e7eb;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #000;
+  transition: color .3s;
+}
+
+.button:hover,
+.button:hover .contacts-icons__icon {
+  color: #fff;
+}

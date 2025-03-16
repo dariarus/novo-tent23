@@ -1,0 +1,7 @@
+.section {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 52px 0;
+  max-width: 936px;
+  text-align: center;
+}
