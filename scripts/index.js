@@ -17,12 +17,11 @@ document.getElementById("emailButton").addEventListener("click", openMail);
 
 // Плавный скролл страницы
 document.querySelectorAll('.navigation__link').forEach(link => {
-  link.addEventListener('click', function(e) {
+  link.addEventListener('click', function (e) {
     e.preventDefault();
 
     const targetId = this.getAttribute('href').substring(1); // Убираем #
     const targetElement = document.getElementById(targetId);
-
 
     const headerHeight = document.querySelector('header').offsetHeight;
 
@@ -35,4 +34,18 @@ document.querySelectorAll('.navigation__link').forEach(link => {
       });
     }
   });
+});
+
+// Эффект hover у картинки товара в блоке "Products"
+document.querySelectorAll('.product-card').forEach((productCard) => {
+  const productImage = productCard.querySelector('.product-card__image');
+  if (productImage) {
+    productCard.addEventListener('mouseenter', () => {
+      productImage.classList.add('product-card__image_hovered');
+    });
+
+    productCard.addEventListener('mouseleave', () => {
+      productImage.classList.remove('product-card__image_hovered');
+    });
+  }
 });

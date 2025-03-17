@@ -1,0 +1,8 @@
+.product-card__text {
+  margin: 10px 0 0;
+  color: #000;
+}
+
+.product-card__text:first-of-type {
+  margin-top: 0;
+}

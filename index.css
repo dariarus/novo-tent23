@@ -31,6 +31,17 @@
 @import url(blocks/button/button.css);
 @import url(blocks/button/_colored/button_colored.css);
 
+@import url(blocks/products-container/products-container.css);
+@import url(blocks/product-card/product-card.css);
+@import url(blocks/product-card/__image-container/product-card__image-container.css);
+@import url(blocks/product-card/__image/product-card__image.css);
+@import url(blocks/product-card/__image/_hovered/product-card__image_hovered.css);
+@import url(blocks/product-card/__text-wrapper/product-card__text-wrapper.css);
+@import url(blocks/product-card/__text/product-card__text.css);
+@import url(blocks/product-card/__text/_price/product-card__text_price.css);
+@import url(blocks/product-card/__text/_title/product-card__text_title.css);
+@import url(blocks/product-card/__text/_subtitle/product-card__text_subtitle.css);
+
 @import url(blocks/promo-cards/promo-cards.css);
 
 @import url(blocks/promo-card/promo-card.css);

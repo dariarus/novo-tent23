@@ -1,0 +1,20 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px 0;
+  box-sizing: border-box;
+  padding: 8px;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  background-color: #fff;
+  overflow: hidden;
+  text-align: start;
+  cursor: pointer;
+  box-shadow: none;
+  transition: box-shadow .3s;
+}
+
+.product-card:hover {
+  box-shadow: 0 3px 4px #2b2d3314, 0 6px 12px #2b2d330a;
+}
