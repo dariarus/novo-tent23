@@ -1,9 +1,0 @@
-.contacts-icons__icon {
-  font-size: 25px;
-  color: #000;
-  transition: color .3s;
-}
-
-.contacts-icons__icon:hover {
-  color: #265cff;
-}

@@ -9,13 +9,15 @@
 @import url(blocks/header/__wrapper/header__wrapper.css);
 @import url(blocks/header/__logo/header__logo.css);
 @import url(blocks/header/__contacts/header__contacts.css);
+@import url(blocks/header/__contacts-icons-wrapper/header__contacts-icons-wrapper.css);
 @import url(blocks/header/__text/header__text.css);
 
 @import url(blocks/navigation/navigation.css);
 @import url(blocks/navigation/__link/navigation__link.css);
 
-@import url(blocks/contacts-icons/contacts-icons.css);
-@import url(blocks/contacts-icons/__icon/contacts-icons__icon.css);
+@import url(blocks/contacts-icon/contacts-icon.css);
+@import url(blocks/contacts-icon/_place/contacts-icon_place_header.css);
+@import url(blocks/contacts-icon/_place/contacts-icon_place_button.css);
 
 @import url(blocks/hero/hero.css);
 @import url(blocks/hero/__text/hero__text.css);
