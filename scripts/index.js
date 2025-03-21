@@ -49,3 +49,10 @@ document.querySelectorAll('.product-card').forEach((productCard) => {
     });
   }
 });
+
+// Переход к WhatsApp при клике на "Заказать" в блоке "Products"
+document.querySelectorAll(".button_colored").forEach(button => {
+  button.addEventListener("click", function() {
+    openWhatsApp();
+  });
+});
