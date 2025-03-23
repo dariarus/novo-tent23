@@ -44,6 +44,12 @@
 @import url(blocks/product-card/__text/_title/product-card__text_title.css);
 @import url(blocks/product-card/__text/_subtitle/product-card__text_subtitle.css);
 
+@import url(blocks/gallery/gallery.css);
+@import url(blocks/gallery/__image-wrapper/gallery__image-wrapper.css);
+@import url(blocks/gallery/__image-big/gallery__image-big.css);
+
+@import url(blocks/gallery-image/gallery-image.css);
+
 @import url(blocks/promo-cards/promo-cards.css);
 
 @import url(blocks/promo-card/promo-card.css);
