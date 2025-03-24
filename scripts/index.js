@@ -131,7 +131,7 @@ function renderImages() {
       freeMode: true,
       watchSlidesProgress: true,
       autoplay: false,
-      cssMode: true,
+      allowTouchMove: true,
     });
 
     const mainSwiper = new Swiper("#main-slider", {
@@ -144,7 +144,7 @@ function renderImages() {
         swiper: thumbsSwiper,
       },
       autoplay: false,
-      cssMode: true,
+      allowTouchMove: true,
     });
 
     // Пересчёт классов
