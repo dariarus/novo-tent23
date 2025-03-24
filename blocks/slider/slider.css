@@ -1,0 +1,11 @@
+.slider {
+  width: 100%;
+}
+
+.slider .swiper-slide-thumb-active {
+  filter: brightness(1);
+}
+
+.slider .swiper-slide-thumb-active:hover {
+  filter: none;
+}

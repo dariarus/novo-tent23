@@ -1,0 +1,30 @@
+.gallery__image-wrapper_with-content {
+  position: relative;
+  cursor: pointer;
+}
+
+.gallery__image-wrapper_with-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.gallery__image-wrapper_with-content::after {
+  content: attr(image-count);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: 400;
+  transition: font-size .1s;
+}
+
+.gallery__image-wrapper_with-content:hover::after {
+  font-size: 28px;
+}

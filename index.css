@@ -1,0 +1,95 @@
+@import url(vendor/normalize.css);
+
+@import url(fonts/fonts.css);
+
+@import url(blocks/body-overlay/body-overlay.css);
+
+@import url(blocks/content/content.css);
+
+@import url(blocks/header/header.css);
+@import url(blocks/header/__content/header__content.css);
+@import url(blocks/header/__wrapper/header__wrapper.css);
+@import url(blocks/header/__logo/header__logo.css);
+@import url(blocks/header/__contacts/header__contacts.css);
+@import url(blocks/header/__contacts-icons-wrapper/header__contacts-icons-wrapper.css);
+@import url(blocks/header/__text/header__text.css);
+
+@import url(blocks/navigation/navigation.css);
+@import url(blocks/navigation/__link/navigation__link.css);
+
+@import url(blocks/contacts-icon/contacts-icon.css);
+@import url(blocks/contacts-icon/_place/contacts-icon_place_header.css);
+@import url(blocks/contacts-icon/_place/contacts-icon_place_button.css);
+
+@import url(blocks/hero/hero.css);
+@import url(blocks/hero/__text/hero__text.css);
+@import url(blocks/hero/__text/_primary/hero__text_primary.css);
+@import url(blocks/hero/__text/_secondary/hero__text_secondary.css);
+
+@import url(blocks/section/section.css);
+@import url(blocks/section/__title/section__title.css);
+
+@import url(blocks/contacts/contacts.css);
+@import url(blocks/contacts/__buttons-wrapper/contacts__buttons-wrapper.css);
+
+@import url(blocks/button/button.css);
+@import url(blocks/button/_colored/button_colored.css);
+@import url(blocks/button/_reversed-colors/button_reversed-colors.css);
+
+@import url(blocks/products-container/products-container.css);
+@import url(blocks/product-card/product-card.css);
+@import url(blocks/product-card/__image-container/product-card__image-container.css);
+@import url(blocks/product-card/__image/product-card__image.css);
+@import url(blocks/product-card/__image/_hovered/product-card__image_hovered.css);
+@import url(blocks/product-card/__text-wrapper/product-card__text-wrapper.css);
+@import url(blocks/product-card/__text/product-card__text.css);
+@import url(blocks/product-card/__text/_price/product-card__text_price.css);
+@import url(blocks/product-card/__text/_title/product-card__text_title.css);
+@import url(blocks/product-card/__text/_subtitle/product-card__text_subtitle.css);
+
+@import url(blocks/gallery/gallery.css);
+@import url(blocks/gallery/__image-wrapper/gallery__image-wrapper.css);
+@import url(blocks/gallery/__image-wrapper/_with-content/gallery__image-wrapper_with-content.css);
+@import url(blocks/gallery/__image-big-wrapper/gallery__image-big-wrapper.css);
+
+@import url(blocks/gallery-image/gallery-image.css);
+
+@import url(blocks/promo-cards/promo-cards.css);
+
+@import url(blocks/promo-card/promo-card.css);
+@import url(blocks/promo-card/__icon-wrap/promo-card__icon-wrap.css);
+@import url(blocks/promo-card/__icon/promo-card__icon.css);
+@import url(blocks/promo-card/__text/promo-card__text.css);
+@import url(blocks/promo-card/__text/_title/promo-card__text_title.css);
+@import url(blocks/promo-card/__text/_subtitle/promo-card__text_subtitle.css);
+
+@import url(blocks/overlay/overlay.css);
+@import url(blocks/overlay/_visible/overlay_visible.css);
+
+@import url(blocks/popup/popup.css);
+@import url(blocks/popup/_opened/popup_opened.css);
+@import url(blocks/popup/__close-icon/popup__close-icon.css);
+@import url(blocks/popup/__close-icon/popup__close-icon.css);
+@import url(blocks/popup/__opened-image/popup__opened-image.css);
+
+@import url(blocks/slider/slider.css);
+@import url(blocks/slider/__slide/slider__slide.css);
+@import url(blocks/slider/__button/slider__button.css);
+@import url(blocks/slider/__button/_prev/slider__button_prev.css);
+@import url(blocks/slider/__button/_next/slider__button_next.css);
+
+@import url(blocks/product-page/product-page.css);
+@import url(blocks/product-page/__description-wrapper/product-page__description-wrapper.css);
+@import url(blocks/product-page/__text-wrapper/product-page__text-wrapper.css);
+@import url(blocks/product-page/__text/product-page__text.css);
+@import url(blocks/product-page/__text/_title/product-page__text_title.css);
+@import url(blocks/product-page/__text/_price/product-page__text_price.css);
+@import url(blocks/product-page/__text/_description/product-page__text_description.css);
+@import url(blocks/product-page/__text/_subtitle/product-page__text_subtitle.css);
+@import url(blocks/product-page/__text/_paragraph/product-page__text_paragraph.css);
+@import url(blocks/product-page/__text/_highlighted/product-page__text_highlighted.css);
+
+@import url(blocks/product-slider/product-slider.css);
+@import url(blocks/product-slider/__slide/product-slider__slide.css);
+@import url(blocks/product-slider/__image/product-slider__image.css);
+@import url(blocks/product-slider/__button/product-slider__button.css);
