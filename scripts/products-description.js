@@ -8,15 +8,15 @@ const productsDescription = [
     materials: 'Наши мягкие окна изготавливаются из исключительно морозостойкой ПВХ пленки толщиной не менее 0,7 микрон. Окантовка окон выполнена из ПВХ ткани плотностью 630 г/м². Для крепления используем только самое надежную комбинацию скоба-ремешок. Для входной группы используем молнии тракторного типа, которые открываются с двух сторон.',
     photos: [
       {
-        src: '../images/soft-windows/soft-windows-05.jpg',
+        src: 'images/soft-windows/soft-windows-05.jpg',
         alt: 'Фото: мягкие окна-05'
       },
       {
-        src: '../images/soft-windows/soft-windows-09.jpg',
+        src: 'images/soft-windows/soft-windows-09.jpg',
         alt: 'Фото: мягкие окна-09'
       },
       {
-        src: '../images/soft-windows/soft-windows-12.jpg',
+        src: 'images/soft-windows/soft-windows-12.jpg',
         alt: 'Фото: мягкие окна-12'
       },
     ]
@@ -30,11 +30,11 @@ const productsDescription = [
     materials: 'ПВХ ткань плотностью от 450 г/м²',
     photos: [
       {
-        src: '../images/trade-tents/trade-tents-01.jpg',
+        src: 'images/trade-tents/trade-tents-01.jpg',
         alt: 'Фото: торговая палатка-01'
       },
       {
-        src: '../images/trade-tents/trade-tents-02.jpg',
+        src: 'images/trade-tents/trade-tents-02.jpg',
         alt: 'Фото: торговая палатка-02'
       },
     ]
@@ -48,15 +48,15 @@ const productsDescription = [
     materials: 'ПВХ ткань плотностью от 450 г/м²',
     photos: [
       {
-        src: '../images/car-covers/car-covers-03.jpg',
+        src: 'images/car-covers/car-covers-03.jpg',
         alt: 'Фото: чехол на грузовое авто-03'
       },
       {
-        src: '../images/car-covers/car-covers-09.jpg',
+        src: 'images/car-covers/car-covers-09.jpg',
         alt: 'Фото: чехол на грузовое авто-09'
       },
       {
-        src: '../images/car-covers/car-covers-28.jpg',
+        src: 'images/car-covers/car-covers-28.jpg',
         alt: 'Фото: чехол на грузовое авто-28'
       },
     ]
@@ -70,15 +70,15 @@ const productsDescription = [
     materials: 'ПВХ ткань плотностью от 450 г/м²',
     photos: [
       {
-        src: '../images/boat-covers/boat-covers-04.JPG',
+        src: 'images/boat-covers/boat-covers-04.JPG',
         alt: 'Фото: чехол на лодку-04'
       },
       {
-        src: '../images/boat-covers/boat-covers-06.JPG',
+        src: 'images/boat-covers/boat-covers-06.JPG',
         alt: 'Фото: чехол на лодку-06'
       },
       {
-        src: '../images/boat-covers/boat-covers-08.JPG',
+        src: 'images/boat-covers/boat-covers-08.JPG',
         alt: 'Фото: чехол на лодку-08'
       },
     ]
@@ -92,15 +92,15 @@ const productsDescription = [
     materials: 'ПВХ ткань плотностью от 450 г/м²',
     photos: [
       {
-        src: '../images/hangars/hangars-02.JPG',
+        src: 'images/hangars/hangars-02.JPG',
         alt: 'Фото: ангар-02'
       },
       {
-        src: '../images/hangars/hangars-05.JPG',
+        src: 'images/hangars/hangars-05.JPG',
         alt: 'Фото: ангар-05'
       },
       {
-        src: '../images/hangars/hangars-10.JPG',
+        src: 'images/hangars/hangars-10.JPG',
         alt: 'Фото: ангар-10'
       },
     ]
@@ -114,15 +114,15 @@ const productsDescription = [
     materials: 'ПВХ ткань плотностью от 450 г/м²',
     photos: [
       {
-        src: '../images/pool-covers/pool-covers-02.jpg',
+        src: 'images/pool-covers/pool-covers-02.jpg',
         alt: 'Фото: покрытие на бассейн-02'
       },
       {
-        src: '../images/pool-covers/pool-covers-05.jpg',
+        src: 'images/pool-covers/pool-covers-05.jpg',
         alt: 'Фото: покрытие на бассейн-05'
       },
       {
-        src: '../images/pool-covers/pool-covers-06.jpg',
+        src: 'images/pool-covers/pool-covers-06.jpg',
         alt: 'Фото: покрытие на бассейн-06'
       },
     ]
