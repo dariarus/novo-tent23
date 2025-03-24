@@ -15,7 +15,7 @@
   <body>
     <div class="content">
       <!--Header-->
-      <header class="header">
+      <header class="header" style="display: none;">
         <div class="header__content">
           <div class="header__wrapper">
             <p class="header__logo">Ново-Тент23</p>
@@ -45,7 +45,7 @@
         </div>
       </header>
 
-      <main>
+      <main style="display: none;">
         <!--Hero-->
         <section class="hero">
           <h1 class="hero__text hero__text_primary">Ново-Тент23</h1>
@@ -82,7 +82,7 @@
         <section class="section" id="products">
           <h3 class="section__title">Товары</h3>
           <div class="products-container">
-            <div class="product-card">
+            <div class="product-card" id="soft-windows">
               <div class="product-card__image-container">
                 <img src="images/soft-windows/soft-windows-28.jpg" alt="Иллюстрация товара: мягкие окна"
                      class="product-card__image"/>
@@ -99,7 +99,7 @@
               </button>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" id="trade-tents">
               <div class="product-card__image-container">
                 <img src="images/trade-tents/trade-tents-01.JPG" alt="Иллюстрация товара: палатка торговая"
                      class="product-card__image"/>
@@ -116,7 +116,7 @@
               </button>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" id="car-covers">
               <div class="product-card__image-container">
                 <img src="images/car-covers/car-covers-01.jpg" alt="Иллюстрация товара: тент на грузовое авто"
                      class="product-card__image"/>
@@ -132,7 +132,7 @@
               </button>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" id="boat-covers">
               <div class="product-card__image-container">
                 <img src="images/boat-covers/boat-covers-01.JPG" alt="Иллюстрация товара: чехол на лодку"
                      class="product-card__image"/>
@@ -149,7 +149,7 @@
               </button>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" id="hangars">
               <div class="product-card__image-container">
                 <img src="images/hangars/hangars-01.jpg" alt="Иллюстрация товара: ангар" class="product-card__image"/>
               </div>
@@ -165,7 +165,7 @@
               </button>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" id="pool-covers">
               <div class="product-card__image-container">
                 <img src="images/pool-covers/pool-covers-01.jpg" alt="Иллюстрация товара: покрытие на бассейн"
                      class="product-card__image"/>
@@ -258,6 +258,45 @@
           <button aria-label="закрыть попап" class="popup__close-icon" type="button"></button>
         </div>
       </main>
+
+      <!-- Product details page -->
+      <div>
+        <main>
+          <section class="section product-page">
+            <div class="swiper product-slider" id="product-page-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide product-slider__slide">
+                  <img class="product-slider__image" src="images/soft-windows/soft-windows-05.jpg" alt=""/>
+                </div>
+                <div class="swiper-slide product-slider__slide">
+                  <img class="product-slider__image" src="images/soft-windows/soft-windows-09.jpg" alt=""/>
+                </div>
+                <div class="swiper-slide product-slider__slide">
+                  <img class="product-slider__image" src="images/soft-windows/soft-windows-12.jpg" alt=""/>
+                </div>
+              </div>
+
+              <!-- Кнопки навигации -->
+              <div class="swiper-button-prev product-slider__button product-slider__button-prev"></div>
+              <div class="swiper-button-next product-slider__button product-slider__button-next"></div>
+
+              <!-- Пагинация (точки) -->
+              <div class="swiper-pagination product-slider__pagination"></div>
+            </div>
+
+            <div class="product-page__description-wrapper">
+              <h3>Мягкие окна</h3>
+              <p>Отличный и недорогой способ,
+                чтобы застеклить ваши беседку, веранду, террасу и кафе</p>
+              <p>Материалы</p>
+              <p>Окна изготавливаются из орозостойкой ПВХ пленки толщиной не менее 0,7 микрон. Окантовка окон выполнена из ПВХ ткани плотностью
+                630 гр/м&sup2. Используем для крепления только самую надежную комбинацию скоба-ремешок.
+                Молнии для входной группы используем тракторного типа, открывающиеся с двух сторон.</p>
+              <button class="button">Заказать</button>
+            </div>
+          </section>
+        </main>
+      </div>
     </div>
 
     <script src="vendor/swiper/swiper-bundle.min.js"></script>

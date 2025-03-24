@@ -1,5 +1,6 @@
 let thumbsSwiper;
 let mainSwiper
+let productPageSwiper;
 
 function initSwiper() {
   // Миниатюры (thumbs)
@@ -21,6 +22,19 @@ function initSwiper() {
     thumbs: {
       swiper: thumbsSwiper, // Привязываем миниатюры
     },
+  });
+
+  productPageSwiper = new Swiper("#product-page-slider", {
+    loop: true,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".product-slider__button-next",
+      prevEl: ".product-slider__button-prev",
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      dynamicBullets: true,
+    }
   });
 }
 

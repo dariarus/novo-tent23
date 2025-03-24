@@ -1,0 +1,13 @@
+.product-slider__button {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 50px;
+  background-color: rgba(88, 88, 88, .6);
+  color: #fff;
+  transition: background-color .3s;
+}
+
+.product-slider__button:hover {
+  background-color: rgba(88, 88, 88, .9);
+}

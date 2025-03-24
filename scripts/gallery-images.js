@@ -61,7 +61,7 @@ const galleryImages = [ // всего 34
     src: '../images/soft-windows/soft-windows-28.jpg',
     alt: 'Фото: мягкие окна-28'
   },
-  // 14 лодки
+  // 15 лодки
   {
     src: '../images/boat-covers/boat-covers-04.JPG',
     alt: 'Фото: чехол на лодку-04'
@@ -78,7 +78,7 @@ const galleryImages = [ // всего 34
     src: '../images/boat-covers/boat-covers-09.JPG',
     alt: 'Фото: чехол на лодку-09'
   },
-  // 18 грузовики
+  // 19 грузовики
   {
     src: '../images/car-covers/car-covers-03.jpg',
     alt: 'Фото: чехол на грузовое авто-03'
@@ -107,7 +107,7 @@ const galleryImages = [ // всего 34
     src: '../images/car-covers/car-covers-20.jpg',
     alt: 'Фото: чехол на грузовое авто-20'
   },
-  // 25 ангары
+  // 26 ангары
   {
     src: '../images/hangars/hangars-02.JPG',
     alt: 'Фото: ангар-02'
@@ -124,7 +124,7 @@ const galleryImages = [ // всего 34
     src: '../images/hangars/hangars-11.JPG',
     alt: 'Фото: ангар-11'
   },
-  // 29 бассейны
+  // 30 бассейны
   {
     src: '../images/pool-covers/pool-covers-02.jpg',
     alt: 'Фото: покрытие на бассейн-02'
@@ -141,7 +141,7 @@ const galleryImages = [ // всего 34
     src: '../images/pool-covers/pool-covers-07.jpg',
     alt: 'Фото: покрытие на бассейн-07'
   },
-  // 33 палатки
+  // 34 палатки
   {
     src: '../images/trade-tents/trade-tents-01.jpg',
     alt: 'Фото: торговая палатка-01'
