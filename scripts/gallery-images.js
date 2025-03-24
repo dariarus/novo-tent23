@@ -6,7 +6,7 @@ const galleryImages = [ // всего 34
   },
   // 2
   {
-    src: 'images/boat-covers/boat-covers-10.JPG',
+    src: 'images/boat-covers/boat-covers-10.jpg',
     alt: 'Фото: чехол на лодку-10'
   },
   // 3
@@ -21,7 +21,7 @@ const galleryImages = [ // всего 34
   },
   // 5
   {
-    src: 'images/hangars/hangars-08.JPG',
+    src: 'images/hangars/hangars-08.jpg',
     alt: 'Фото: ангар-08'
   },
   // 6 окна
@@ -63,19 +63,19 @@ const galleryImages = [ // всего 34
   },
   // 15 лодки
   {
-    src: 'images/boat-covers/boat-covers-04.JPG',
+    src: 'images/boat-covers/boat-covers-04.jpg',
     alt: 'Фото: чехол на лодку-04'
   },
   {
-    src: 'images/boat-covers/boat-covers-06.JPG',
+    src: 'images/boat-covers/boat-covers-06.jpg',
     alt: 'Фото: чехол на лодку-06'
   },
   {
-    src: 'images/boat-covers/boat-covers-08.JPG',
+    src: 'images/boat-covers/boat-covers-08.jpg',
     alt: 'Фото: чехол на лодку-08'
   },
   {
-    src: 'images/boat-covers/boat-covers-09.JPG',
+    src: 'images/boat-covers/boat-covers-09.jpg',
     alt: 'Фото: чехол на лодку-09'
   },
   // 19 грузовики
@@ -109,19 +109,19 @@ const galleryImages = [ // всего 34
   },
   // 26 ангары
   {
-    src: 'images/hangars/hangars-02.JPG',
+    src: 'images/hangars/hangars-02.jpg',
     alt: 'Фото: ангар-02'
   },
   {
-    src: 'images/hangars/hangars-05.JPG',
+    src: 'images/hangars/hangars-05.jpg',
     alt: 'Фото: ангар-05'
   },
   {
-    src: 'images/hangars/hangars-10.JPG',
+    src: 'images/hangars/hangars-10.jpg',
     alt: 'Фото: ангар-10'
   },
   {
-    src: 'images/hangars/hangars-11.JPG',
+    src: 'images/hangars/hangars-11.jpg',
     alt: 'Фото: ангар-11'
   },
   // 30 бассейны

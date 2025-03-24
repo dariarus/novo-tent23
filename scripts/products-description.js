@@ -70,15 +70,15 @@ const productsDescription = [
     materials: 'ПВХ ткань плотностью от 450 г/м²',
     photos: [
       {
-        src: 'images/boat-covers/boat-covers-04.JPG',
+        src: 'images/boat-covers/boat-covers-04.jpg',
         alt: 'Фото: чехол на лодку-04'
       },
       {
-        src: 'images/boat-covers/boat-covers-06.JPG',
+        src: 'images/boat-covers/boat-covers-06.jpg',
         alt: 'Фото: чехол на лодку-06'
       },
       {
-        src: 'images/boat-covers/boat-covers-08.JPG',
+        src: 'images/boat-covers/boat-covers-08.jpg',
         alt: 'Фото: чехол на лодку-08'
       },
     ]
@@ -92,15 +92,15 @@ const productsDescription = [
     materials: 'ПВХ ткань плотностью от 450 г/м²',
     photos: [
       {
-        src: 'images/hangars/hangars-02.JPG',
+        src: 'images/hangars/hangars-02.jpg',
         alt: 'Фото: ангар-02'
       },
       {
-        src: 'images/hangars/hangars-05.JPG',
+        src: 'images/hangars/hangars-05.jpg',
         alt: 'Фото: ангар-05'
       },
       {
-        src: 'images/hangars/hangars-10.JPG',
+        src: 'images/hangars/hangars-10.jpg',
         alt: 'Фото: ангар-10'
       },
     ]
