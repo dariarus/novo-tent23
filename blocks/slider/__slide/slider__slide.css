@@ -1,0 +1,10 @@
+.slider__slide {
+  width: calc(25% - 10px); /* Миниатюры по 4 в ряд */
+  cursor: pointer;
+  filter: brightness(.5);
+  transition: filter .3s;
+}
+
+.slider__slide:hover {
+  filter: brightness(.7);
+}

@@ -16,13 +16,13 @@ const galleryImages = [ // всего 34
   },
   // 4
   {
-    src: '../images/hangars/hangars-08.JPG',
-    alt: 'Фото: ангар-08'
+    src: '../images/pool-covers/pool-covers-04.jpg',
+    alt: 'Фото: покрытие на бассейн-05'
   },
   // 5
   {
-    src: '../images/pool-covers/pool-covers-04.jpg',
-    alt: 'Фото: покрытие на бассейн-05'
+    src: '../images/hangars/hangars-08.JPG',
+    alt: 'Фото: ангар-08'
   },
   // 6 окна
   {
@@ -54,8 +54,12 @@ const galleryImages = [ // всего 34
     alt: 'Фото: мягкие окна-17'
   },
   {
-    src: '../images/soft-windows/soft-windows-25.jpg',
-    alt: 'Фото: мягкие окна-25'
+    src: '../images/soft-windows/soft-windows-26.jpg',
+    alt: 'Фото: мягкие окна-26'
+  },
+  {
+    src: '../images/soft-windows/soft-windows-28.jpg',
+    alt: 'Фото: мягкие окна-28'
   },
   // 14 лодки
   {
@@ -142,8 +146,4 @@ const galleryImages = [ // всего 34
     src: '../images/trade-tents/trade-tents-01.jpg',
     alt: 'Фото: торговая палатка-01'
   },
-  {
-    src: '../images/trade-tents/trade-tents-02.jpg',
-    alt: 'Фото: торговая палатка-02'
-  }
 ]

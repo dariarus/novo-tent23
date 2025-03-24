@@ -1,0 +1,16 @@
+.slider__button {
+  height: 50%;
+  top: 20%;
+  padding: 0 5px;
+  background-color: #585858;
+  z-index: 4;
+  transition: background-color .3s;
+}
+
+.slider__button:hover {
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.slider__button::after {
+  color: #fff;
+}
