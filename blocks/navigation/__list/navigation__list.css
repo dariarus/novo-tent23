@@ -1,5 +1,6 @@
 .navigation__list {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 0 20px;
   margin: 0;

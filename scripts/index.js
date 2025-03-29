@@ -3,6 +3,7 @@
 // отслеживание ширины окна
 const header = document.getElementById('header');
 const headerMobile = document.getElementById('header-mobile');
+let isProductPageOpen = false;
 
 function getIsMobile() {
   return window.matchMedia("(max-width: 768px)").matches;
@@ -10,6 +11,9 @@ function getIsMobile() {
 
 // Переключение header между мобильной и десктопной версиями
 function toggleHeaders() {
+  // Ничего не делать, если открыта страница товара
+  if (isProductPageOpen) return;
+
   const isMobile = getIsMobile();
   header.style.display = isMobile ? "none" : "block";
   headerMobile.style.display = isMobile ? "block" : "none";
@@ -23,15 +27,17 @@ toggleHeaders();
 window.addEventListener("resize", toggleHeaders);
 
 // Эффект hover у иконок в блоках 'Header' и 'Contacts'
-const headerIconPlace = document.querySelector('.header__contacts-icons-wrapper')
-headerIconPlace.querySelectorAll('.contacts-icon').forEach((headerIcon) => {
-  headerIcon.addEventListener('mouseenter', () => {
-    headerIcon?.classList.add('contacts-icon_place_header');
-  });
+document.querySelectorAll('.contacts-icons-wrapper').forEach((wrapper) => {
+    wrapper.querySelectorAll('.contacts-icon').forEach((icon) => {
+      icon.addEventListener('mouseenter', () => {
+        icon?.classList.add('contacts-icon_place_shell'); // shell - хедер и футер, т.е. "оболочка" над контентом
+      });
 
-  headerIcon.addEventListener('mouseleave', () => {
-    headerIcon?.classList.remove('contacts-icon_place_header');
-  });
+      icon.addEventListener('mouseleave', () => {
+        icon?.classList.remove('contacts-icon_place_shell');
+      });
+  })
+
 });
 
 document.querySelectorAll('.button').forEach(button => {
@@ -249,6 +255,7 @@ const productSliderWrapper = productSlide.querySelector('.swiper-wrapper');
 
 // Функция для отображения страницы товара
 function showProductPage(productId) {
+  isProductPageOpen = true;
   const product = productsDescription.find(p => p.id === productId);
 
   if (product) {
@@ -300,6 +307,7 @@ function showProductPage(productId) {
 
 // Назад к списку товаров
 function showMainContent() {
+  isProductPageOpen = false;
   productPageContent.style.display = 'none';
   mainPageContent.style.display = 'block';
   if (getIsMobile()) {

@@ -1,0 +1,6 @@
+.footer__text_large {
+  flex-basis: 33%;
+  text-align: center;
+  font-size: 22px;
+  line-height: 24px;
+}

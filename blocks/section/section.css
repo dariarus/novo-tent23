@@ -1,7 +1,7 @@
 .section {
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 52px 0 0;
+  padding: 0 0 52px;
   max-width: 936px;
   text-align: center;
 }

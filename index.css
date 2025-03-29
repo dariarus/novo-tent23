@@ -13,7 +13,6 @@
 @import url(blocks/header/__logo/header__logo.css);
 @import url(blocks/header/__logo/_mobile/header__logo_mobile.css);
 @import url(blocks/header/__contacts/header__contacts.css);
-@import url(blocks/header/__contacts-icons-wrapper/header__contacts-icons-wrapper.css);
 @import url(blocks/header/__text/header__text.css);
 
 @import url(blocks/navigation/navigation.css);
@@ -26,8 +25,12 @@
 @import url(blocks/menu-icon/_active/menu-icon_active.css);
 @import url(blocks/menu-icon/__span/menu-icon__span.css);
 
+@import url(blocks/contacts-icons-wrapper/contacts-icons-wrapper.css);
+@import url(blocks/contacts-icons-wrapper/_header/contacts-icon-wrapper_header.css);
+
 @import url(blocks/contacts-icon/contacts-icon.css);
-@import url(blocks/contacts-icon/_place/contacts-icon_place_header.css);
+@import url(blocks/contacts-icon/contacts-icon.css);
+@import url(blocks/contacts-icon/_place/contacts-icon_place_shell.css);
 @import url(blocks/contacts-icon/_place/contacts-icon_place_button.css);
 
 @import url(blocks/hero/hero.css);
@@ -102,3 +105,10 @@
 @import url(blocks/product-slider/__slide/product-slider__slide.css);
 @import url(blocks/product-slider/__image/product-slider__image.css);
 @import url(blocks/product-slider/__button/product-slider__button.css);
+
+@import url(blocks/footer/footer.css);
+@import url(blocks/footer/__contacts/footer__contacts.css);
+@import url(blocks/footer/__contacts-icons-wrapper/footer__contacts-icons-wrapper.css);
+@import url(blocks/footer/__text/footer__text.css);
+@import url(blocks/footer/__text/_large/footer__text_large.css);
+@import url(blocks/footer/__text/_side/footer__text_side.css);

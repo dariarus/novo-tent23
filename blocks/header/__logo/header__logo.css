@@ -1,5 +1,6 @@
 .header__logo {
   margin: 0;
+  min-width: max-content;
   font-size: 26px;
   line-height: 28px;
   font-weight: 500;
