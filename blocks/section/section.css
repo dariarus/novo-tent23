@@ -1,13 +1,13 @@
 .section {
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 0 0 52px;
+  padding: 0 20px 52px;
   max-width: 936px;
   text-align: center;
 }
 
 @media screen and (max-width: 768px) {
   .section {
-    padding: 0 0 35px;
+    padding-bottom: 35px;
   }
 }

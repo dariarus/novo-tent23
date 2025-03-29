@@ -18,14 +18,6 @@
   }
 }
 
-@media screen and (max-width: 900px) {
-  .navigation__link {
-    font-size: 16px;
-    line-height: 18px;
-    text-transform: none;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .navigation__link {
     font-size: 24px;
