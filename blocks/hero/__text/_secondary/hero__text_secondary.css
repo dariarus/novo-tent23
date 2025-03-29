@@ -4,3 +4,10 @@
   font-weight: 400;
   color: rgba(255, 255, 255, .7);
 }
+
+@media screen and (max-width: 587px) {
+  .hero__text_secondary {
+    max-width: 500px;
+    text-align: center;
+  }
+}

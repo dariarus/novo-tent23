@@ -4,3 +4,10 @@
   font-weight: 500;
   color: #fff;
 }
+
+@media screen and (max-width: 900px) {
+  .hero__text_primary {
+    font-size: 34px;
+    line-height: 36px;
+  }
+}

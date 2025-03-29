@@ -5,3 +5,9 @@
   max-width: 936px;
   text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 0 0 35px;
+  }
+}
