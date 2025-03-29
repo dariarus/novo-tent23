@@ -1,0 +1,10 @@
+.menu-icon__span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  transition: all .3s;
+  background-color: #000;
+  transform: scale(1) translate(0, -50%);
+}

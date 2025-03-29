@@ -1,23 +1,47 @@
+"use strict"
+
+// отслеживание ширины окна
+const header = document.getElementById('header');
+const headerMobile = document.getElementById('header-mobile');
+
+function getIsMobile() {
+  return window.matchMedia("(max-width: 768px)").matches;
+}
+
+// Переключение header между мобильной и десктопной версиями
+function toggleHeaders() {
+  const isMobile = getIsMobile();
+  header.style.display = isMobile ? "none" : "block";
+  headerMobile.style.display = isMobile ? "block" : "none";
+  console.log('isMobile', isMobile)
+}
+
+// Запускаем при загрузке страницы
+toggleHeaders();
+
+// Следим за изменением размеров окна
+window.addEventListener("resize", toggleHeaders);
+
 // Эффект hover у иконок в блоках 'Header' и 'Contacts'
 const headerIconPlace = document.querySelector('.header__contacts-icons-wrapper')
 headerIconPlace.querySelectorAll('.contacts-icon').forEach((headerIcon) => {
   headerIcon.addEventListener('mouseenter', () => {
-    headerIcon.classList.add('contacts-icon_place_header');
+    headerIcon?.classList.add('contacts-icon_place_header');
   });
 
   headerIcon.addEventListener('mouseleave', () => {
-    headerIcon.classList.remove('contacts-icon_place_header');
+    headerIcon?.classList.remove('contacts-icon_place_header');
   });
 });
 
 document.querySelectorAll('.button').forEach(button => {
   const buttonIcon = button.querySelector('.contacts-icon');
   button.addEventListener('mouseenter', () => {
-    buttonIcon.classList.add('contacts-icon_place_button');
+    buttonIcon?.classList.add('contacts-icon_place_button');
   });
 
   button.addEventListener('mouseleave', () => {
-    buttonIcon.classList.remove('contacts-icon_place_button');
+    buttonIcon?.classList.remove('contacts-icon_place_button');
   });
 });
 
@@ -38,15 +62,26 @@ document.getElementById('instagramButton').addEventListener('click', openInstagr
 document.getElementById('whatsAppButton').addEventListener('click', openWhatsApp);
 document.getElementById('emailButton').addEventListener('click', openMail);
 
-// Плавный скролл страницы
-document.querySelectorAll('.navigation__link').forEach(link => {
+const menuIcon = document.querySelector('.menu-icon');
+const nav = document.querySelector('.navigation');
+const navMobile = document.querySelector('.navigation_mobile');
+// Открыть/закрыть меню-бургер
+if (menuIcon) {
+  menuIcon.addEventListener('click', () => {
+    menuIcon.classList.toggle('menu-icon_active');
+    navMobile.classList.toggle('navigation_active');
+    document.body.classList.toggle('body-overlay');
+  })
+}
+
+function addEventListenerToNavLink(link) {
   link.addEventListener('click', function (e) {
     e.preventDefault();
 
     const targetId = this.getAttribute('href').substring(1); // Убираем #
     const targetElement = document.getElementById(targetId);
 
-    const headerHeight = document.querySelector('header').offsetHeight;
+    const headerHeight = document.querySelector('header').offsetHeight + 20;
 
     if (targetElement) {
       const offsetTop = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight; // Учитываем отступ для фиксированного меню
@@ -56,7 +91,21 @@ document.querySelectorAll('.navigation__link').forEach(link => {
         behavior: 'smooth'
       });
     }
-  });
+
+    if (menuIcon.classList.contains('menu-icon_active')) {
+      menuIcon.classList.remove('menu-icon_active');
+      navMobile.classList.remove('navigation_active');
+      document.body.classList.remove('body-overlay');
+    }
+  })
+}
+
+// Плавный скролл страницы
+nav.querySelectorAll('.navigation__link').forEach(link => {
+  addEventListenerToNavLink(link);
+});
+navMobile.querySelectorAll('.navigation__link').forEach(link => {
+  addEventListenerToNavLink(link);
 });
 
 // Эффект hover у картинки товара в блоке 'Products'
@@ -192,7 +241,6 @@ lastImage.addEventListener('click', openPopup);
 /* ------------------------------- */
 
 // Загрузка элементов на страницу с описанием товаров
-const header = document.getElementById('header');
 const mainPageContent = document.getElementById('main-page-content');
 const productPageContent = document.getElementById('product-page-content');
 
@@ -238,21 +286,28 @@ function showProductPage(productId) {
 
     // Показываем детальную страницу
     productPageContent.style.display = 'block';
-    header.style.display = 'none';
     mainPageContent.style.display = 'none';
+    if (getIsMobile()) {
+      headerMobile.style.display = 'none';
+    } else {
+      header.style.display = 'none';
+    }
 
     // Меняем URL в адресной строке
-    history.pushState({ product: productId }, '', `?product=${encodeURIComponent(productId)}`);
+    history.pushState({product: productId}, '', `?product=${encodeURIComponent(productId)}`);
   }
 }
 
 // Назад к списку товаров
 function showMainContent() {
   productPageContent.style.display = 'none';
-  header.style.display = 'block';
   mainPageContent.style.display = 'block';
-
-  // Обновляем URL, убирая параметр ?product=
+  if (getIsMobile()) {
+    headerMobile.style.display = 'block';
+  } else {
+    header.style.display = 'block';
+  }
+// Обновляем URL, убирая параметр ?product=
   history.pushState(null, '', window.location.pathname);
 }
 

@@ -8,16 +8,23 @@
 
 @import url(blocks/header/header.css);
 @import url(blocks/header/__content/header__content.css);
+@import url(blocks/header/__content/_mobile/header__content_mobile.css);
 @import url(blocks/header/__wrapper/header__wrapper.css);
 @import url(blocks/header/__logo/header__logo.css);
+@import url(blocks/header/__logo/_mobile/header__logo_mobile.css);
 @import url(blocks/header/__contacts/header__contacts.css);
 @import url(blocks/header/__contacts-icons-wrapper/header__contacts-icons-wrapper.css);
 @import url(blocks/header/__text/header__text.css);
 
 @import url(blocks/navigation/navigation.css);
+@import url(blocks/navigation/_active/navigation_active.css);
 @import url(blocks/navigation/__list/navigation__list.css);
 @import url(blocks/navigation/__list-item/navigation__list-item.css);
 @import url(blocks/navigation/__link/navigation__link.css);
+
+@import url(blocks/menu-icon/menu-icon.css);
+@import url(blocks/menu-icon/_active/menu-icon_active.css);
+@import url(blocks/menu-icon/__span/menu-icon__span.css);
 
 @import url(blocks/contacts-icon/contacts-icon.css);
 @import url(blocks/contacts-icon/_place/contacts-icon_place_header.css);

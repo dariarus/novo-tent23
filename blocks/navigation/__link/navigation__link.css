@@ -10,3 +10,10 @@
 .navigation__link:hover {
   text-decoration: underline;
 }
+
+@media screen and (max-width: 767px) {
+  .navigation__link {
+    font-size: 24px;
+    line-height: 26px;
+  }
+}

@@ -1,0 +1,9 @@
+.navigation_active {
+
+}
+
+@media screen and (max-width: 767px) {
+  .navigation_active {
+    right: 0;
+  }
+}
