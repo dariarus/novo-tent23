@@ -11,7 +11,22 @@
   text-decoration: underline;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1087px) {
+  .navigation__link {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .navigation__link {
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .navigation__link {
     font-size: 24px;
     line-height: 26px;

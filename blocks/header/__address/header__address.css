@@ -1,0 +1,9 @@
+.header__address {
+
+}
+
+@media screen and (max-width: 1087px) {
+  .header__address {
+    display: none;
+  }
+}
