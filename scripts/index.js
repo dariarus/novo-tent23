@@ -202,24 +202,22 @@ function renderImages(selectedImage) {
 
   const mainSwiper = new Swiper("#main-slider", {
     loop: true,
+    slidesPerView: 1,
     spaceBetween: 10,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+    pagination: {
+      el: '.swiper-pagination',
+      dynamicBullets: true,
+      clickable: true,
     },
-    thumbs: {
-      swiper: thumbsSwiper,
-    },
-    autoplay: false,
     allowTouchMove: true,
+    autoplay: false,
   });
-
 
   // Переключаем главный слайдер на выбранное изображение
   if (selectedIndex !== -1) {
     mainSwiper.slideTo(selectedIndex);
   }
-
+  console.log('main', mainSwiper)
   // Пересчёт классов
   thumbsSwiper.update();
   mainSwiper.update();
@@ -248,6 +246,17 @@ document.addEventListener('keydown', (evt) => {
 });
 
 overlay.addEventListener('click', closePopup);
+// overlay.addEventListener('click', (event) => {
+//   if (event.target === overlay) {
+//     closePopup();
+//   }
+// });
+//
+// overlay.addEventListener('touchend', (event) => {
+//   if (event.target === overlay) {
+//     closePopup();
+//   }
+// });
 cross.addEventListener('click', closePopup);
 
 // Динамическая подгрузка на страницу количества оставшихся фото в блоке 'Gallery'
@@ -285,7 +294,8 @@ function renderGallery() {
     pagination.classList.add('swiper-pagination');
     gallerySlider.appendChild(pagination);
 
-    new Swiper('#gallery-slider', {
+    const gs = new Swiper('#gallery-slider', {
+      loop: true,
       slidesPerView: 1,
       spaceBetween: 10,
       pagination: {
@@ -293,7 +303,10 @@ function renderGallery() {
         dynamicBullets: true,
         clickable: true,
       },
+      allowTouchMove: true,
+      autoplay: false,
     });
+    console.log('gal sw', gs)
   } else {
     galleryContainer.style.display = 'grid';
     gallerySlider.style.display = 'none';

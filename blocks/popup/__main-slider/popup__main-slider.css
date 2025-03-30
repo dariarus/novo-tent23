@@ -2,23 +2,8 @@
   width: 100%;
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 910px) {
   .popup__main-slider {
-    max-width: 600px;
-    height: 600px;
-  }
-}
-
-@media screen and (max-width: 680px) {
-  .popup__main-slider {
-    max-width: 400px;
-    height: 400px;
-  }
-}
-
-@media screen and (max-width: 460px) {
-  .popup__main-slider {
-    max-width: 300px;
-    height: 300px;
+    height: 100%;
   }
 }
