@@ -22,3 +22,9 @@
     padding: 20px 20px;
   }
 }
+
+@media screen and (max-height: 580px) {
+  .popup {
+    max-width: 600px;
+  }
+}
