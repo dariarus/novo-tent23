@@ -6,9 +6,11 @@
   height: 456px;
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 768px) {
   .gallery {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    height: 200px;
   }
 }
 
