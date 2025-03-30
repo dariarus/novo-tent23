@@ -385,7 +385,7 @@ function showProductPage(productId) {
     document.querySelector('.product-page__text_title').textContent = product.name;
     document.querySelector('.product-page__text_price').innerHTML = product.price;
     document.querySelector('.product-page__text_description').textContent = product.description;
-    document.querySelector('.product-page__text_paragraph').textContent = product.materials;
+    document.querySelector('.materials').textContent = product.materials;
 
     clearContainer(productSliderWrapper);
     product.photos.forEach((image) => {

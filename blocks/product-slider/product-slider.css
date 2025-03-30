@@ -4,3 +4,21 @@
   height: 1000px;
   margin: 0;
 }
+
+@media screen and (max-width: 630px){
+  .product-slider {
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 510px){
+  .product-slider {
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 430px){
+  .product-slider {
+    max-width: 300px;
+  }
+}

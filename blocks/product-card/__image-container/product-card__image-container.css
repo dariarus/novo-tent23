@@ -1,8 +1,15 @@
 .product-card__image-container {
-  width: 288px;
-  height: 288px;
+  width: 275px;
+  height: 275px;
   border-radius: 12px;
   overflow: hidden;
+}
+
+@media screen and (max-width: 1000px) {
+  .product-card__image-container {
+    width: 288px;
+    height: 288px;
+  }
 }
 
 @media screen and (max-width: 370px) {
