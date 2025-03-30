@@ -3,3 +3,9 @@
   flex-direction: column;
   gap: 10px;
 }
+
+@media screen and (max-width: 360px) {
+  .footer__contacts {
+    align-items: center;
+  }
+}

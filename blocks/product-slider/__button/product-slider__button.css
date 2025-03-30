@@ -11,3 +11,9 @@
 .product-slider__button:hover {
   background-color: rgba(88, 88, 88, .9);
 }
+
+@media screen and (max-width: 510px){
+  .product-slider__button{
+    display: none;
+  }
+}

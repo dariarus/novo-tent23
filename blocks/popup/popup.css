@@ -25,6 +25,13 @@
 
 @media screen and (max-height: 580px) {
   .popup {
+    height: 100vh;
     max-width: 600px;
+  }
+}
+
+@media screen and (max-height: 460px) {
+  .popup {
+    max-width: 400px;
   }
 }
