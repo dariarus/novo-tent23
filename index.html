@@ -2,15 +2,56 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ново-Тент23 - заказ и изготовление каркасных и тентовых изделий любой сложности">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+    <meta name="description"
+          content="Ново-Тент23 – изготовление и заказ каркасных и тентовых изделий любой сложности в Новороссийске.
+          Высокое качество, индивидуальные решения, скидки постоянным клиентам">
+    <meta name="geo.placename" content="Новороссийск, Россия">
     <meta name="keywords"
-          content="тент, тенты в Новороссийске, тентовые изделия, каркасные изделия, ангары, палатки, чехлы, мягкие окна">
-    <title>Ново-Тент23</title>
+          content="мягкие окна Новороссийск, изготовление мягких окон, окна для беседок и веранд, жидкие окна,
+    изготовление жидких окон в Новороссийске, жидкие стекла для беседок и веранд, производство тентов, изготовление тентов в Новороссийске,
+    тенты на заказ, покрытия из ПВХ для крыши, тенты на газель, ремонт тентов в Новороссийске, покрытия для контейнеров open top,
+    съемные крыши ПВХ для УАЗ, тенты и покрытия для бассейнов, тентовые покрытия для ангаров, изготовление ходовых тентов для яхт,
+    чехлы для лодок и яхт, изготовление чехлов для лодок и катеров">
+    <title>Тенты и каркасные конструкции в Новороссийске | Ново-Тент23</title>
     <link rel="stylesheet" href="vendor/font-awesome/font-awesome.css">
     <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="index.css">
     <link rel="shortcut icon" href="images/soft-windows/soft-windows-37.jpg">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Ново-Тент23",
+        "address": [
+          {
+            "@type": "PostalAddress",
+            "addressLocality": "Новороссийск",
+            "addressCountry": "RU"
+          },
+          {
+            "@type": "PostalAddress",
+            "addressLocality": "Анапа",
+            "addressCountry": "RU"
+          },
+          {
+            "@type": "PostalAddress",
+            "addressLocality": "Геленджик",
+            "addressCountry": "RU"
+          },
+          {
+            "@type": "PostalAddress",
+            "addressLocality": "Краснодар",
+            "addressCountry": "RU"
+          }
+        ],
+        "url": "https://yourwebsite.ru",
+        "telephone": "+7 967 222-95-55"
+      }
+    </script>
+
+    <!-- TODO: поменять ссылку url -->
+
   </head>
   <body>
     <div class="content">
@@ -20,14 +61,21 @@
           <div class="header__wrapper">
             <p class="header__logo">Ново-Тент23</p>
             <nav class="navigation">
-              <a class="navigation__link" href="#contacts">Контакты</a>
-              <a class="navigation__link" href="#products">Товары</a>
-              <a class="navigation__link" href="#gallery">Примеры работ</a>
-              <a class="navigation__link" href="#advantages">Наши преимущества</a>
+              <ul class="navigation__list">
+                <li class="navigation__list-item"><a class="navigation__link navigation__link_desktop" href="#contacts">Контакты</a>
+                </li>
+                <li class="navigation__list-item"><a class="navigation__link navigation__link_desktop" href="#products">Товары</a>
+                </li>
+                <li class="navigation__list-item"><a class="navigation__link navigation__link_desktop" href="#gallery">Примеры
+                  работ</a></li>
+                <li class="navigation__list-item"><a class="navigation__link navigation__link_desktop"
+                                                     href="#advantages">Наши преимущества</a>
+                </li>
+              </ul>
             </nav>
           </div>
           <div class="header__contacts">
-            <div class="header__contacts-icons-wrapper">
+            <div class="contacts-icons-wrapper contacts-icons-wrapper_header">
               <a href="https://www.instagram.com/novo_tent/?igsh=MTNobHdxYWs1eW9kYw%3D%3D&utm_source=qr#"
                  target="_blank">
                 <i class="fa-brands fa-instagram contacts-icon"></i>
@@ -40,7 +88,25 @@
               </a>
             </div>
             <p class="header__text">+7 967 222-95-55</p>
-            <p class="header__text">г. Новороссийск, село Борисовка, <br/>улица Центральная, 21</p>
+            <p class="header__text header__address">г. Новороссийск, село Борисовка, <br/>улица Центральная, 21</p>
+          </div>
+        </div>
+      </header>
+
+      <header class="header" id="header-mobile" style="display: none">
+        <div class="header__content header__content_mobile">
+          <p class="header__logo header__logo_mobile">Ново-Тент23</p>
+          <nav class="navigation navigation_mobile">
+            <ul class="navigation__list">
+              <li class="navigation__list-item"><a class="navigation__link" href="#contacts">Контакты</a></li>
+              <li class="navigation__list-item"><a class="navigation__link" href="#products">Товары</a></li>
+              <li class="navigation__list-item"><a class="navigation__link" href="#gallery">Примеры работ</a></li>
+              <li class="navigation__list-item"><a class="navigation__link" href="#advantages">Наши преимущества</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="menu-icon">
+            <span class="menu-icon__span"></span>
           </div>
         </div>
       </header>
@@ -187,26 +253,15 @@
         <!--Gallery-->
         <section class="section" id="gallery">
           <h3 class="section__title">Примеры наших изделий</h3>
-          <div class="gallery">
-            <div class="gallery__image-wrapper gallery__image-big-wrapper">
-              <img src="images/soft-windows/soft-windows-27.jpg" alt="Фото: мягкие окна-27" class="gallery-image"/>
-            </div>
-            <div class="gallery__image-wrapper">
-              <img src="images/boat-covers/boat-covers-10.jpg" alt="Фото: чехол на лодку-10" class="gallery-image"/>
-            </div>
-            <div class="gallery__image-wrapper">
-              <img src="images/car-covers/car-covers-05.jpg" alt="Фото: чехол на грузовое авто-05"
-                   class="gallery-image"/>
-            </div>
-            <div class="gallery__image-wrapper">
-              <img src="images/pool-covers/pool-covers-05.jpg" alt="Фото: покрытие на бассейн-05"
-                   class="gallery-image"/>
-            </div>
-            <div class="gallery__image-wrapper gallery__image-wrapper_with-content">
-              <img src="images/hangars/hangars-08.jpg" alt="Фото: ангар-08" class="gallery-image"/>
-            </div>
+          <div class="gallery" style="display: grid"></div>
+
+          <div class="swiper gallery-slider" id="gallery-slider" style="display: none">
+            <div class="swiper-wrapper gallery-slider__wrapper"></div>
+            <!-- Пагинация (точки) -->
+            <div class="swiper-pagination gallery-slider__pagination"></div>
           </div>
         </section>
+
 
         <!--Advantages-->
         <section class="section" id="advantages">
@@ -247,13 +302,13 @@
         <div class="popup">
           <div class="swiper-button-next slider__button slider__button_next"></div>
           <!-- Основной слайдер (большое изображение) -->
-          <div class="swiper slider" id="main-slider">
+          <div class="swiper slider popup__main-slider" id="main-slider">
             <div class="swiper-wrapper"></div>
           </div>
           <div class="swiper-button-prev slider__button slider__button_prev"></div>
 
           <!-- Миниатюры (второй слайдер) -->
-          <div class="swiper slider" id="thumbs-slider">
+          <div class="swiper slider popup__thumbs-slider" id="thumbs-slider">
             <div class="swiper-wrapper"></div>
           </div>
           <button aria-label="закрыть попап" class="popup__close-icon" type="button"></button>
@@ -287,6 +342,26 @@
           </div>
         </section>
       </main>
+
+      <footer class="footer">
+        <div class="footer__contacts">
+          <div class="contacts-icons-wrapper">
+            <a href="https://www.instagram.com/novo_tent/?igsh=MTNobHdxYWs1eW9kYw%3D%3D&utm_source=qr#"
+               target="_blank">
+              <i class="fa-brands fa-instagram contacts-icon"></i>
+            </a>
+            <a href="https://wa.me/79672229555" target="_blank">
+              <i class="fa-brands fa-whatsapp contacts-icon"></i>
+            </a>
+            <a href="mailto:novotent.23@mail.ru" target="_blank">
+              <i class="fa-regular fa-envelope contacts-icon"></i>
+            </a>
+          </div>
+          <p class="footer__text">+7 967 222-95-55</p>
+        </div>
+        <p class="footer__text footer__text_large">Ново-Тент23</p>
+        <p class="footer__text footer__text_side">г. Новороссийск, <br/>село Борисовка, <br/>улица Центральная, 21</p>
+      </footer>
     </div>
 
     <script src="vendor/swiper/swiper-bundle.min.js"></script>

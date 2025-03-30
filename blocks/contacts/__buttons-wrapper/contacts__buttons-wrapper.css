@@ -3,3 +3,10 @@
   justify-content: center;
   gap: 0 8px;
 }
+
+@media screen and (max-width: 610px) {
+  .contacts__buttons-wrapper {
+    flex-direction: column;
+    gap: 8px 0;
+  }
+}

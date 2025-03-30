@@ -4,3 +4,11 @@
   line-height: 46px;
   font-weight: 500;
 }
+
+@media screen and (max-width: 900px) {
+  .section__title {
+    margin-bottom: 20px;
+    font-size: 36px;
+    line-height: 38px;
+  }
+}

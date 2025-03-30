@@ -1,0 +1,11 @@
+.gallery-slider__slide {
+  margin: 0;
+  width: 100%;
+  height: 500px;
+}
+
+@media screen and (max-width: 520px) {
+  .gallery-slider__slide {
+    height: 300px;
+  }
+}

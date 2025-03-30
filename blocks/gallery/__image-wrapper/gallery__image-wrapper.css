@@ -5,3 +5,9 @@
   border-radius: 16px;
   overflow: hidden;
 }
+
+@media screen and (max-width: 680px) {
+  .gallery__image-wrapper {
+    max-height: 500px;
+  }
+}

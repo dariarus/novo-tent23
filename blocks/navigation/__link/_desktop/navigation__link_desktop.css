@@ -1,0 +1,9 @@
+.navigation__link_desktop {
+
+}
+
+@media screen and (max-width: 900px) {
+  .navigation__link_desktop {
+    text-transform: none;
+  }
+}
