@@ -160,7 +160,9 @@ function renderImages(selectedImage) {
   clearContainer(mainSwiperWrapper);
 
   // Определяем индекс выбранного изображения
-  const selectedIndex = galleryImages.findIndex(image => image.src === selectedImage.src);
+  const selectedIndex = galleryImages.findIndex(image => {
+    return selectedImage.src.toLowerCase().includes(image.src.toLowerCase())
+  });
 
   galleryImages.forEach((image) => {
     const slide = document.createElement("div");
@@ -200,6 +202,7 @@ function renderImages(selectedImage) {
 
   const mainSwiper = new Swiper("#main-slider", {
     loop: true,
+    spaceBetween: 10,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -211,9 +214,9 @@ function renderImages(selectedImage) {
     allowTouchMove: true,
   });
 
+
   // Переключаем главный слайдер на выбранное изображение
   if (selectedIndex !== -1) {
-    console.log('here')
     mainSwiper.slideTo(selectedIndex);
   }
 
@@ -259,8 +262,6 @@ function renderGallery() {
 
   if (window.matchMedia("(max-width: 680px)").matches) {
     // Если экран меньше 680px, используем Swiper
-    // const swiperWrapper = document.createElement('div');
-    // swiperWrapper.classList.add('swiper-wrapper');
     galleryContainer.style.display = 'none';
     gallerySlider.style.display = 'block';
     const swiperWrapper = gallerySlider.querySelector('.swiper-wrapper');
@@ -278,15 +279,11 @@ function renderGallery() {
       swiperWrapper.appendChild(swiperSlide);
     });
 
-    // const swiperContainer = document.createElement('div');
-    // swiperContainer.classList.add('swiper');
     gallerySlider.appendChild(swiperWrapper);
 
     const pagination = document.createElement('div');
     pagination.classList.add('swiper-pagination');
     gallerySlider.appendChild(pagination);
-
-    // galleryContainer.appendChild(swiperContainer);
 
     new Swiper('#gallery-slider', {
       slidesPerView: 1,
@@ -329,12 +326,7 @@ function renderGallery() {
       wrapper.appendChild(img);
       galleryContainer.appendChild(wrapper);
     });
-    gallerySlider.addEventListener('click', (event) => {
-      if (event.target.classList.contains('gallery-image')) {
-        console.log('here')
-        openPopup(event.target);
-      }
-    });
+
     // Обновляем количество оставшихся изображений
     const remainingPicturesCount = galleryImages.length - visibleImages;
     const lastImage = document.querySelector('.gallery__image-wrapper_with-content');
@@ -345,6 +337,16 @@ function renderGallery() {
     }
   }
 }
+
+window.addEventListener('load', function() {
+  // Здесь добавляем слушатель после загрузки всех ресурсов
+  const gallerySlider = document.getElementById('gallery-slider');
+  gallerySlider.addEventListener('click', (event) => {
+    if (event.target.classList.contains('gallery-image')) {
+      openPopup(event.target);
+    }
+  });
+});
 
 // Вызов функции рендеринга галереи
 renderGallery();

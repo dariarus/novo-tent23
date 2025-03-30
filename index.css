@@ -90,6 +90,8 @@
 @import url(blocks/popup/__close-icon/popup__close-icon.css);
 @import url(blocks/popup/__close-icon/popup__close-icon.css);
 @import url(blocks/popup/__opened-image/popup__opened-image.css);
+@import url(blocks/popup/__main-slider/popup__main-slider.css);
+@import url(blocks/popup/__thumbs-slider/popup__thumbs-slider.css);
 
 @import url(blocks/slider/slider.css);
 @import url(blocks/slider/__slide/slider__slide.css);

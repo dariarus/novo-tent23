@@ -1,0 +1,9 @@
+.popup__thumbs-slider {
+
+}
+
+@media screen and (max-width: 830px) {
+  .popup__thumbs-slider {
+    display: none;
+  }
+}
