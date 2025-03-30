@@ -1,0 +1,13 @@
+.gallery-slider__pagination {
+
+}
+
+.gallery-slider__pagination .swiper-pagination-bullet {
+  background-color: white;
+  opacity: 0.5;
+}
+
+.gallery-slider__pagination .swiper-pagination-bullet-active {
+  background-color: white;
+  opacity: 1;
+}

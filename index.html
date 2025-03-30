@@ -62,10 +62,14 @@
             <p class="header__logo">Ново-Тент23</p>
             <nav class="navigation">
               <ul class="navigation__list">
-                <li class="navigation__list-item"><a class="navigation__link navigation__link_desktop" href="#contacts">Контакты</a></li>
-                <li class="navigation__list-item"><a class="navigation__link navigation__link_desktop" href="#products">Товары</a></li>
-                <li class="navigation__list-item"><a class="navigation__link navigation__link_desktop" href="#gallery">Примеры работ</a></li>
-                <li class="navigation__list-item"><a class="navigation__link navigation__link_desktop" href="#advantages">Наши преимущества</a>
+                <li class="navigation__list-item"><a class="navigation__link navigation__link_desktop" href="#contacts">Контакты</a>
+                </li>
+                <li class="navigation__list-item"><a class="navigation__link navigation__link_desktop" href="#products">Товары</a>
+                </li>
+                <li class="navigation__list-item"><a class="navigation__link navigation__link_desktop" href="#gallery">Примеры
+                  работ</a></li>
+                <li class="navigation__list-item"><a class="navigation__link navigation__link_desktop"
+                                                     href="#advantages">Наши преимущества</a>
                 </li>
               </ul>
             </nav>
@@ -249,8 +253,15 @@
         <!--Gallery-->
         <section class="section" id="gallery">
           <h3 class="section__title">Примеры наших изделий</h3>
-          <div class="gallery"></div>
+          <div class="gallery" style="display: grid"></div>
+
+          <div class="swiper gallery-slider" id="gallery-slider" style="display: none">
+            <div class="swiper-wrapper gallery-slider__wrapper"></div>
+            <!-- Пагинация (точки) -->
+            <div class="swiper-pagination gallery-slider__pagination"></div>
+          </div>
         </section>
+
 
         <!--Advantages-->
         <section class="section" id="advantages">
@@ -349,7 +360,7 @@
           <p class="footer__text">+7 967 222-95-55</p>
         </div>
         <p class="footer__text footer__text_large">Ново-Тент23</p>
-          <p class="footer__text footer__text_side">г. Новороссийск, <br/>село Борисовка, <br/>улица Центральная, 21</p>
+        <p class="footer__text footer__text_side">г. Новороссийск, <br/>село Борисовка, <br/>улица Центральная, 21</p>
       </footer>
     </div>
 

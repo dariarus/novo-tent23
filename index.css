@@ -65,7 +65,11 @@
 @import url(blocks/gallery/__image-wrapper/gallery__image-wrapper.css);
 @import url(blocks/gallery/__image-wrapper/_with-content/gallery__image-wrapper_with-content.css);
 @import url(blocks/gallery/__image-big-wrapper/gallery__image-big-wrapper.css);
-/*@import url(blocks/gallery/__);*/
+
+@import url(blocks/gallery-slider/gallery-slider.css);
+@import url(blocks/gallery-slider/__wrapper/gallery-slider__wrapper.css);
+@import url(blocks/gallery-slider/__slide/gallery-slider__slide.css);
+@import url(blocks/gallery-slider/__pagination/gallery-slider__pagination.css);
 
 @import url(blocks/gallery-image/gallery-image.css);
 

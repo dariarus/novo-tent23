@@ -153,11 +153,15 @@ function clearContainer(container) {
 }
 
 // Отрисовать массив изображений в открывшемся попапе
-function renderImages() {
+function renderImages(selectedImage) {
   // Слайдер для больших изображений
   const mainSwiperContainer = document.getElementById('main-slider');
   const mainSwiperWrapper = mainSwiperContainer.querySelector('.swiper-wrapper');
   clearContainer(mainSwiperWrapper);
+
+  // Определяем индекс выбранного изображения
+  const selectedIndex = galleryImages.findIndex(image => image.src === selectedImage.src);
+
   galleryImages.forEach((image) => {
     const slide = document.createElement("div");
     slide.classList.add("swiper-slide");
@@ -207,14 +211,22 @@ function renderImages() {
     allowTouchMove: true,
   });
 
+  // Переключаем главный слайдер на выбранное изображение
+  if (selectedIndex !== -1) {
+    console.log('here')
+    mainSwiper.slideTo(selectedIndex);
+  }
+
   // Пересчёт классов
   thumbsSwiper.update();
   mainSwiper.update();
-
 }
 
-function openPopup() {
-  renderImages();
+function openPopup(img) {
+  // Если галерея в режиме слайдера, открыть с выбранного изображения, иначе с первого
+  const isSliderMode = window.matchMedia("(max-width: 680px)").matches;
+  const selectedImage = isSliderMode ? img : galleryImages[0];
+  renderImages(selectedImage);
   overlay.classList.add('overlay_visible');
   popup.classList.add('popup_opened');
   document.body.classList.add('body-overlay');
@@ -237,56 +249,100 @@ cross.addEventListener('click', closePopup);
 
 // Динамическая подгрузка на страницу количества оставшихся фото в блоке 'Gallery'
 const galleryContainer = document.querySelector('.gallery');
+const gallerySlider = document.getElementById('gallery-slider');
 
 function renderGallery() {
-  // Очистить контейнер галереи, удалив все дочерние элементы
+  // Очистить контейнер галереи
   while (galleryContainer.firstChild) {
     galleryContainer.removeChild(galleryContainer.firstChild);
   }
 
-  // Определяем количество изображений в зависимости от ширины экрана
-  let visibleImages;
-  if (window.matchMedia("(max-width: 500px)").matches) {
-    visibleImages = 2;// Для экранов шириной 500px или меньше
-  } else if (window.matchMedia("(max-width: 680px)").matches) {
-    visibleImages = 3;
-  } else if (window.matchMedia("(max-width: 768px)").matches) {
-    visibleImages = 4;  // Для экранов шириной от 501px до 768px
-  } else if (window.matchMedia("(max-width: 910px)").matches) {
-    visibleImages = 8;  // Для экранов шириной от 769px до 910px
+  if (window.matchMedia("(max-width: 680px)").matches) {
+    // Если экран меньше 680px, используем Swiper
+    // const swiperWrapper = document.createElement('div');
+    // swiperWrapper.classList.add('swiper-wrapper');
+    galleryContainer.style.display = 'none';
+    gallerySlider.style.display = 'block';
+    const swiperWrapper = gallerySlider.querySelector('.swiper-wrapper');
+
+    galleryImages.forEach((image) => {
+      const swiperSlide = document.createElement('div');
+      swiperSlide.classList.add('swiper-slide', 'gallery-slider__slide');
+
+      const img = document.createElement('img');
+      img.src = image.src;
+      img.alt = image.alt;
+      img.classList.add('gallery-image');
+
+      swiperSlide.appendChild(img);
+      swiperWrapper.appendChild(swiperSlide);
+    });
+
+    // const swiperContainer = document.createElement('div');
+    // swiperContainer.classList.add('swiper');
+    gallerySlider.appendChild(swiperWrapper);
+
+    const pagination = document.createElement('div');
+    pagination.classList.add('swiper-pagination');
+    gallerySlider.appendChild(pagination);
+
+    // galleryContainer.appendChild(swiperContainer);
+
+    new Swiper('#gallery-slider', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+        clickable: true,
+      },
+    });
   } else {
-    visibleImages = 5;  // Для экранов шириной более 910px
-  }
-
-  // Добавляем изображения в контейнер галереи
-  galleryImages.slice(0, visibleImages).forEach((image, index) => {
-    const wrapper = document.createElement('div');
-    wrapper.classList.add('gallery__image-wrapper');
-
-    // Добавляем класс с контентом для последнего изображения
-    if (index === 0) {
-      wrapper.classList.add('gallery__image-big-wrapper');
-    }
-    if (index === visibleImages - 1) {
-      wrapper.classList.add('gallery__image-wrapper_with-content');
+    galleryContainer.style.display = 'grid';
+    gallerySlider.style.display = 'none';
+    // Обычная галерея для больших экранов
+    let visibleImages;
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      visibleImages = 4;
+    } else if (window.matchMedia("(max-width: 910px)").matches) {
+      visibleImages = 8;
+    } else {
+      visibleImages = 5;
     }
 
-    const img = document.createElement('img');
-    img.src = image.src;
-    img.alt = image.alt;
-    img.classList.add('gallery-image');
+    galleryImages.slice(0, visibleImages).forEach((image, index) => {
+      const wrapper = document.createElement('div');
+      wrapper.classList.add('gallery__image-wrapper');
 
-    wrapper.appendChild(img);
-    galleryContainer.appendChild(wrapper);
-  });
+      if (index === 0) {
+        wrapper.classList.add('gallery__image-big-wrapper');
+      }
+      if (index === visibleImages - 1) {
+        wrapper.classList.add('gallery__image-wrapper_with-content');
+      }
 
-  // Обновляем количество оставшихся изображений
-  const remainingPicturesCount = galleryImages.length - visibleImages;
-  const lastImage = document.querySelector('.gallery__image-wrapper_with-content');
+      const img = document.createElement('img');
+      img.src = image.src;
+      img.alt = image.alt;
+      img.classList.add('gallery-image');
 
-  if (lastImage) {
-    lastImage.setAttribute('image-count', `+${remainingPicturesCount}`);
-    lastImage.addEventListener('click', openPopup);
+      wrapper.appendChild(img);
+      galleryContainer.appendChild(wrapper);
+    });
+    gallerySlider.addEventListener('click', (event) => {
+      if (event.target.classList.contains('gallery-image')) {
+        console.log('here')
+        openPopup(event.target);
+      }
+    });
+    // Обновляем количество оставшихся изображений
+    const remainingPicturesCount = galleryImages.length - visibleImages;
+    const lastImage = document.querySelector('.gallery__image-wrapper_with-content');
+
+    if (lastImage) {
+      lastImage.setAttribute('image-count', `+${remainingPicturesCount}`);
+      lastImage.addEventListener('click', openPopup);
+    }
   }
 }
 
