@@ -65,6 +65,7 @@
 @import url(blocks/gallery/__image-wrapper/gallery__image-wrapper.css);
 @import url(blocks/gallery/__image-wrapper/_with-content/gallery__image-wrapper_with-content.css);
 @import url(blocks/gallery/__image-big-wrapper/gallery__image-big-wrapper.css);
+/*@import url(blocks/gallery/__);*/
 
 @import url(blocks/gallery-image/gallery-image.css);
 

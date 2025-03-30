@@ -5,3 +5,16 @@
   gap: 12px;
   height: 456px;
 }
+
+@media screen and (max-width: 680px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /*grid-template-rows: repeat(2, 1fr);*/
+}

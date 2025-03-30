@@ -28,14 +28,14 @@ window.addEventListener("resize", toggleHeaders);
 
 // Эффект hover у иконок в блоках 'Header' и 'Contacts'
 document.querySelectorAll('.contacts-icons-wrapper').forEach((wrapper) => {
-    wrapper.querySelectorAll('.contacts-icon').forEach((icon) => {
-      icon.addEventListener('mouseenter', () => {
-        icon?.classList.add('contacts-icon_place_shell'); // shell - хедер и футер, т.е. "оболочка" над контентом
-      });
+  wrapper.querySelectorAll('.contacts-icon').forEach((icon) => {
+    icon.addEventListener('mouseenter', () => {
+      icon?.classList.add('contacts-icon_place_shell'); // shell - хедер и футер, т.е. "оболочка" над контентом
+    });
 
-      icon.addEventListener('mouseleave', () => {
-        icon?.classList.remove('contacts-icon_place_shell');
-      });
+    icon.addEventListener('mouseleave', () => {
+      icon?.classList.remove('contacts-icon_place_shell');
+    });
   })
 
 });
@@ -236,13 +236,65 @@ overlay.addEventListener('click', closePopup);
 cross.addEventListener('click', closePopup);
 
 // Динамическая подгрузка на страницу количества оставшихся фото в блоке 'Gallery'
-const remainingPicturesCount = galleryImages.length - 5;
+const galleryContainer = document.querySelector('.gallery');
 
-const lastImage = document.querySelector('.gallery__image-wrapper_with-content');
-if (lastImage) {
-  lastImage.setAttribute('image-count', `+${remainingPicturesCount}`);
+function renderGallery() {
+  // Очистить контейнер галереи, удалив все дочерние элементы
+  while (galleryContainer.firstChild) {
+    galleryContainer.removeChild(galleryContainer.firstChild);
+  }
+
+  // Определяем количество изображений в зависимости от ширины экрана
+  let visibleImages;
+  if (window.matchMedia("(max-width: 500px)").matches) {
+    visibleImages = 2;// Для экранов шириной 500px или меньше
+  } else if (window.matchMedia("(max-width: 680px)").matches) {
+    visibleImages = 3;
+  } else if (window.matchMedia("(max-width: 768px)").matches) {
+    visibleImages = 4;  // Для экранов шириной от 501px до 768px
+  } else if (window.matchMedia("(max-width: 910px)").matches) {
+    visibleImages = 8;  // Для экранов шириной от 769px до 910px
+  } else {
+    visibleImages = 5;  // Для экранов шириной более 910px
+  }
+
+  // Добавляем изображения в контейнер галереи
+  galleryImages.slice(0, visibleImages).forEach((image, index) => {
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('gallery__image-wrapper');
+
+    // Добавляем класс с контентом для последнего изображения
+    if (index === 0) {
+      wrapper.classList.add('gallery__image-big-wrapper');
+    }
+    if (index === visibleImages - 1) {
+      wrapper.classList.add('gallery__image-wrapper_with-content');
+    }
+
+    const img = document.createElement('img');
+    img.src = image.src;
+    img.alt = image.alt;
+    img.classList.add('gallery-image');
+
+    wrapper.appendChild(img);
+    galleryContainer.appendChild(wrapper);
+  });
+
+  // Обновляем количество оставшихся изображений
+  const remainingPicturesCount = galleryImages.length - visibleImages;
+  const lastImage = document.querySelector('.gallery__image-wrapper_with-content');
+
+  if (lastImage) {
+    lastImage.setAttribute('image-count', `+${remainingPicturesCount}`);
+    lastImage.addEventListener('click', openPopup);
+  }
 }
-lastImage.addEventListener('click', openPopup);
+
+// Вызов функции рендеринга галереи
+renderGallery();
+
+// Ререндер галереи при изменении размера окна
+window.addEventListener('resize', renderGallery);
 
 /* ------------------------------- */
 
