@@ -17,7 +17,6 @@ function toggleHeaders() {
   const isMobile = getIsMobile();
   header.style.display = isMobile ? "none" : "block";
   headerMobile.style.display = isMobile ? "block" : "none";
-  console.log('isMobile', isMobile)
 }
 
 // Запускаем при загрузке страницы
@@ -87,7 +86,14 @@ function addEventListenerToNavLink(link) {
     const targetId = this.getAttribute('href').substring(1); // Убираем #
     const targetElement = document.getElementById(targetId);
 
-    const headerHeight = document.querySelector('header').offsetHeight + 20;
+    let header;
+    if (getIsMobile()) {
+      header = document.getElementById('header-mobile');
+    } else {
+      header = document.getElementById('header')
+    }
+
+    const headerHeight = header.offsetHeight + 20; // к высоте хедера добавляется еще 20px
 
     if (targetElement) {
       const offsetTop = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight; // Учитываем отступ для фиксированного меню
@@ -217,7 +223,6 @@ function renderImages(selectedImage) {
   if (selectedIndex !== -1) {
     mainSwiper.slideTo(selectedIndex);
   }
-  console.log('main', mainSwiper)
   // Пересчёт классов
   thumbsSwiper.update();
   mainSwiper.update();
@@ -306,7 +311,6 @@ function renderGallery() {
       allowTouchMove: true,
       autoplay: false,
     });
-    console.log('gal sw', gs)
   } else {
     galleryContainer.style.display = 'grid';
     gallerySlider.style.display = 'none';
