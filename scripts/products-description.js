@@ -100,7 +100,7 @@ const productsDescription = [
         alt: 'Фото: ангар-05'
       },
       {
-        src: 'images/hangars/hangars-10.jpg',
+        src: 'images/hangars/hangars-12.jpg',
         alt: 'Фото: ангар-10'
       },
     ]
